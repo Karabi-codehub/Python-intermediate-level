@@ -1,0 +1,3 @@
+Problem-3:  Find if a sentence contains a 3-digit number
+Input:"My code is 123"
+Hint: Use regular expressions.
