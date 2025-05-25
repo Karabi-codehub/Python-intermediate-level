@@ -1,0 +1,8 @@
+Problem-5: Validate Email Format
+Write a function that validates emails during user registration.
+
+Input: "test@domain.com"
+
+Output: True
+
+Hint: Use regular expressions.

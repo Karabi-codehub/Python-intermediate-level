@@ -1,0 +1,89 @@
+﻿💡 What is the Regular Expression (re) Module in Python?
+
+The re module in Python is used to search, match, and find patterns in text.
+Think of regular expressions (regex) like a smart search tool that can find things in a string, such as:
+    • emails
+    • phone numbers
+    • specific words
+    • patterns like "any 3 digits followed by a letter (like 123a, 456Z, 000b, etc.))"
+      
+🧠 Example without regex:
+Imagine you want to find if a sentence has the word "apple" in it:
+text = "I have an apple"
+print("apple" in text)  # Output: True
+This is simple, but what if you want to find:
+    • any word that starts with "a"
+    • or a phone number
+    • or an email address
+This is where regular expressions are very powerful!
+🧠 Example with regex:
+import re
+
+text = "Here is a code: 123a and another: 456B, but not 12a or 7899c"
+
+# Define the pattern: 3 digits followed by one letter
+pattern = r"\d{3}[a-zA-Z]"
+
+# Find all matches in the text
+matches = re.findall(pattern, text)
+print("Matches found:", matches)
+Output: Matches found: ['123a', '456B']
+
+💬 Explanation:
+    • re.findall() goes through the whole string and returns all matches of the pattern.
+    • It finds:
+        ◦ 123a ✅ (3 digits + 1 letter)
+        ◦ 456B ✅ (3 digits + 1 letter)
+    • It skips:
+        ◦ 12a ❌ (only 2 digits)
+        ◦ 7899c ❌ (has 4 digits, not 3)
+
+Explanation — Every Word in the Code (problem 5):
+
+import re
+    • import: A Python keyword used to bring in external libraries.
+    • re: The name of the regular expression module (used to search and match text patterns).
+
+def is_valid_email(email):
+    • def: Starts the definition of a function.
+    • is_valid_email: The name of our function.
+    • (email): The parameter we pass into the function — a string we want to check.
+
+pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    • pattern: A variable that stores our regular expression.
+    • r'': The raw string notation (so Python doesn’t treat \ as escape characters).
+
+Expression
+Interpretation
+"C:\n\t"
+Interprets \n and \t as newline and tab
+r"C:\n\t"
+Keeps \n and \t as literal characters
+
+
+'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$': The actual regex pattern:
+    • ^: Start of the string.
+    • [a-zA-Z0-9._%+-]+: One or more valid characters before the @.
+    • @: The mandatory at-symbol in an email.
+    • [a-zA-Z0-9.-]+: One or more valid characters for the domain.
+    • \.: A literal dot (.) before the domain suffix (like .com).
+    • [a-zA-Z]{2,}: The domain suffix must have at least two letters.
+    • $: End of the string
+if re.match(pattern, email):
+    • if: A condition.
+    • re.match(...): Checks if the email matches the pattern.
+    • pattern: The regex we defined.
+    • email: The string we’re checking.
+return True
+    • return: Exit the function and send back a value.
+    • True: Means the email is valid.
+      
+else: return False
+    • else: If the above condition wasn’t true (no match).
+    • return False: Means the email is not valid.
+print(is_valid_email("test@domain.com"))
+    • print: Displays the result.
+    • is_valid_email("test@domain.com"): Calls our function with the test email.
+
+
+
