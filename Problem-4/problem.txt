@@ -1,0 +1,3 @@
+Problem-4:Define the pattern: 3 digits followed by one letter
+Input:"Here is a code: 123a and another: 456B, but not 12a or 7899c"
+Hint: Use regular expressions.
