@@ -1,0 +1,14 @@
+﻿💡 Problem Statement:
+We want to build a password validator — a small program that checks if a password is strong and secure.
+✅ A good (strong) password must:
+    1. Be at least 8 characters long.
+    2. Contain at least one uppercase letter. (like A, B, C, ...)
+    3. Contain at least one lowercase letter. (like a, b, c, ...)
+    4. Contain at least one digit. (like 1, 2, 3, ...)
+    5. Contain at least one special character. (like @, #, !, etc.)
+🧠 How to Solve?
+We'll use Python to do this.
+We can either:
+    • Use manual checks (any() and string methods), OR
+    • Use regular expressions (regex) — a pattern-matching method.
+

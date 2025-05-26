@@ -1,0 +1,4 @@
+Problem-6: Password Validator (Security Utility)
+Build a validator that checks for minimum length, uppercase, lowercase, number, and special character.
+
+Hint: Use regex or manual checks with any().
