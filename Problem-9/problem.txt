@@ -1,0 +1,4 @@
+Problem-9: Most Frequent Word (Excluding Stopwords)
+Analyze blog content and find the most frequent word, excluding common stopwords.
+Text: Given in code
+Hint: Clean punctuations, lowercase all, use Counter.
