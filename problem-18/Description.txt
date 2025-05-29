@@ -1,0 +1,25 @@
+﻿✅ What is an Apache Log File?
+An Apache log file stores information about every request made to a website. Each line in the log represents a request and usually starts with the IP address of the visitor.
+Example line from Apache log:
+192.168.1.1 - - [29/May/2025:10:15:32 +0000] "GET /index.html HTTP/1.1" 200 1024
+Here, 192.168.1.1 is the IP address.
+  Example
+    • Imagine a guestbook where every visitor writes their name (IP).
+    • You want to know who visited the most.
+    • We’ll count how many times each “name” (IP) appears and find the top 3.
+📝 Explanation of the  code:
+    1. from collections import Counter
+        ◦ Imports the Counter class, which helps count how many times each IP appears.
+    2. ip_counter = Counter()
+        ◦ Initializes a Counter object to store counts of each IP.
+    3. with open(log_file_path, 'r') as file:
+        ◦ Opens the log file for reading.
+    4. for line in file:
+        ◦ Loops through each line in the file.
+    5. ip = line.split()[0]
+        ◦ Assumes the IP address is the first element in each line of the log (standard Apache format).
+    6. ip_counter[ip] += 1
+        ◦ Increments the count for that IP.
+    7. ip_counter.most_common(3)
+        ◦ Retrieves the top 3 most common IPs with their counts.
+    8. Prints the results.
