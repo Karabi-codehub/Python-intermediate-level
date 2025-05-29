@@ -1,0 +1,18 @@
+﻿🔢 Problem: Command-line Calculator
+We need to create a small calculator tool that works in the terminal (command line).
+✅ What it should do:
+    • It will ask the user to type something like:
+add 5 7
+    • The program will understand that the user wants to add 5 and 7, and return:
+12
+🧠 Hint Explanation:
+We can use:
+input().split()
+This:
+    • input() gets the user's full text (like "add 5 7").
+    • .split() turns that into a list of words like:
+['add', '5', '7']
+Then we can check what the user wants to do using if, elif:
+    • If they typed "add", we add the numbers.
+    • If they typed "subtract", we subtract, and so on.
+
