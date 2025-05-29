@@ -1,0 +1,82 @@
+🎯 What is an LRU Cache?
+Imagine you have a small toy box 🎁 that can hold only 3 toys. You love playing with your toys, but when the box is full and you get a new toy, you must remove one old toy to make space.
+But which toy do you remove?
+You remove the one you haven’t played with for the longest time — that’s called the Least Recently Used (LRU) toy!
+🧸 Example: How LRU Cache Works
+Let’s say your toy box can only hold 3 toys:
+You do this:
+    1. You put in Toy1 → Box: [Toy1]
+    2. You put in Toy2 → Box: [Toy1, Toy2]
+    3. You put in Toy3 → Box: [Toy1, Toy2, Toy3]
+Now the box is full!
+    4. You want to put in Toy4. But the box is full!
+So what do you do?
+👉 Remove the oldest unused toy — which is Toy1 (you haven’t played with it in a while).
+Now box becomes: [Toy2, Toy3, Toy4]
+
+🧠 So in Computers…
+This "toy box" is like a cache in the computer that stores data. When it gets full, it throws out the least recently used data to make room for new one.
+We create two methods:
+    • get(key) → like asking, "Do I already have this toy?"
+    • put(key, value) → like adding or updating a toy in the box.
+Code explanation:
+
+from collections import OrderedDict
+
+    • from collections: This accesses Python's built-in collections module, which contains specialized data structures.
+    • import OrderedDict: This imports the OrderedDict class. Unlike a regular dict, an OrderedDict remembers the order in which keys were inserted. This is crucial for LRU (Least Recently Used) logic.
+class LRUCache:
+
+    • class: This defines a new class.
+    • LRUCache: The name of the class. It stands for Least Recently Used Cache.
+def __init__(self, capacity: int):
+    • def: Begins the definition of a function (in this case, a constructor).
+    • __init__: The special method automatically called when an object is created.
+    • self: Refers to the current instance of the class.
+    • capacity: int: A parameter indicating how many key-value pairs the cache can hold. The : int is a type hint showing it should be an integer.
+self.cache = OrderedDict()
+
+    • self.cache: A variable to hold our cache data.
+    • = OrderedDict(): Initializes it as an empty ordered dictionary to maintain access order.
+self.capacity = capacity
+
+    • self.capacity: Saves the maximum size limit of the cache.
+    • = capacity: Assigns the user-specified value to self.capacity.
+
+def get(self, key: int) -> int:
+
+    • def get: Defines a method to retrieve the value for a given key.
+    • key: int: The key to search for.
+    • -> int: Type hint stating that this method returns an integer.
+
+if key not in self.cache:
+    • Checks whether the key is in the cache (dictionary).
+
+Return -1
+    • If the key is not found, return -1 as a signal (common in cache problems).
+
+self.cache.move_to_end(key)
+    • move_to_end(key): Moves the accessed key to the end of the dictionary, marking it as the most recently used.
+
+return self.cache[key]
+    • Returns the value associated with the key.
+
+ def put(self, key: int, value: int) -> None:
+    • put: Method to add or update a key-value pair.
+    • key: int, value: int: Type hints for inputs.
+    • -> None: Indicates that this function returns nothing
+if key in self.cache:
+    • Checks whether the key is already in the cache.
+self.cache.move_to_end(key)
+    • Moves the key to the end (most recently used), as it’s being updated.
+ self.cache[key] = value
+    • Adds the new key-value pair or updates the value if the key already exists.
+
+if len(self.cache) > self.capacity:
+    • If the cache size exceeds its capacity
+
+self.cache.popitem(last=False)
+    • popitem(last=False): Removes the first item in the OrderedDict (i.e., the least recently used item).
+    • last=False: Means pop from the start of the order (oldest item).
+
+

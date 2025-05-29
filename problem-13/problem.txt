@@ -1,0 +1,13 @@
+Problem-13:You are given the following sequence of cache operations on an LRU (Least Recently Used) cache with a capacity of 3:
+
+cache.put(1, '🐻')     # Add bear
+cache.put(2, '🚗')     # Add car
+cache.put(3, '🎲')     # Add dice
+cache.get(1)          # Access bear
+cache.put(4, '🪁')     # Add kite
+Question:
+What is the final content of the cache (in order from least recently used to most recently used)?
+
+Which key-value pair is evicted from the cache and why?
+
+If we now call cache.get(2), what will it return and why?
