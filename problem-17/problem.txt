@@ -1,0 +1,8 @@
+Problem-17: Flatten a Nested JSON
+Flatten a nested dictionary for storage in tabular format or NoSQL DB.
+
+Input: {"a": {"b": 1}}
+
+Output: {"a.b": 1}
+
+Hint: Use recursion.

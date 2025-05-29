@@ -1,0 +1,29 @@
+﻿To flatten a nested JSON (or dictionary), we use recursion to go through each level of the dictionary, and when we find a nested dictionary, we combine the keys using a separator like a dot (.). This helps turn it into a flat structure.
+✅ Example
+Input:
+{"a": {"b": 1}}
+Output:
+{"a.b": 1}
+✅  code explanation(Word by Word)
+    1. def flatten_dict(d, parent_key='', sep='.'):
+        ◦ We define a function named flatten_dict that takes:
+            ▪ d: the dictionary to flatten,
+            ▪ parent_key: used to keep track of keys in nested levels (starts as empty),
+            ▪ sep: the separator used to join nested keys (default is a dot .).
+    2. items = {}
+        ◦ Create an empty dictionary to store the flattened results.
+    3. for k, v in d.items():
+        ◦ Loop through each key (k) and value (v) in the input dictionary.
+    4. new_key = parent_key + sep + k if parent_key else k
+        ◦ If there's a parent_key, we join it with the current key using a dot.
+        ◦ If not, we just use the current key.
+    5. if isinstance(v, dict):
+        ◦ If the value is another dictionary, we need to flatten it too.
+        ◦ We call flatten_dict() again (recursion) with v and the new key.
+    6. items.update(...)
+        ◦ Add the flattened results from the recursive call to our items dictionary.
+    7. else: items[new_key] = v
+        ◦ If the value is not a dictionary, just add the new key-value pair.
+    8. return items
+        ◦ Return the final flattened dictionary.
+
