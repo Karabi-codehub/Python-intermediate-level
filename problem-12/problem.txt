@@ -1,0 +1,18 @@
+Problem-12: Write a program that simulates a simple calculator. It should repeatedly take input in the format:
+<operation> <num1> <num2>
+
+Supported operations:
+add, subtract, multiply, divide, power, mod, max, min
+
+Requirements:
+Print the result of the operation in the format: Result: <value>
+
+If the user types exit, print Goodbye! and end the program.
+
+If input format is incorrect or values are not numbers, print an appropriate error message.
+
+If dividing by zero, show: Result: Cannot divide by zero!
+
+If the operation is unknown, show: Result: Unknown command!
+
+

@@ -1,0 +1,34 @@
+upgrade the calculator so it:
+
+Works in a loop – keeps running again and again.
+
+Stops only when the user types exit.
+
+Supports more operations like:
+
+    • add
+    • 
+    • subtract
+    • 
+    • multiply
+    • 
+    • divide
+    • 
+    • power (e.g. 2 power 3 = 8)
+    • 
+    • mod (modulus: remainder)
+    • 
+    • max (finds the bigger number)
+    • 
+    • min (finds the smaller number)
+      
+🧠 Easy Explanations:
+    • while True: → keeps the calculator running until we break the loop.
+    • if user_input.lower() == "exit": → stops the program when you type exit.
+    • split() → breaks your text into words like ['add', '5', '7'].
+    • float() → allows both whole numbers (5) and decimals (5.5).
+    • try...except → catches errors if you type something that's not a number.
+    • max(a, b) → gives the bigger number.
+    • min(a, b) → gives the smaller number.
+
+
