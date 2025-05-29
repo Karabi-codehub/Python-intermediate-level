@@ -1,0 +1,23 @@
+﻿Here's an optimized recursive Fibonacci function using memoization with @lru_cache from Python's functools module. This technique is useful in dynamic programming (DP) problems, especially in machine learning (ML) for optimizing performance in recursive algorithms.
+💡 Explanation (Line-by-Line):
+    1. from functools import lru_cache:
+Imports the built-in decorator to enable automatic caching of function calls.
+    2. @lru_cache(maxsize=None):
+Decorator that wraps the function and stores results of previous calls.
+maxsize=None means there's no limit to the number of cached calls.
+    3. def fibonacci(n)::
+Defines the recursive function to compute the nth Fibonacci number.
+    4. Base cases:
+        ◦ if n == 0: return 0 → The 0th Fibonacci number is 0.
+        ◦ elif n == 1: return 1 → The 1st Fibonacci number is 1.
+    5. Recursive case:
+        ◦ return fibonacci(n - 1) + fibonacci(n - 2):
+This is the classic recursive formula.
+Thanks to memoization, each unique sub-problem is solved only once.
+    6. n = 50 and print(...):
+Calls the function and prints the 50th Fibonacci number:
+Output: 12586269025
+🚀 Why This Is Efficient
+    • Without caching, each call re-computes sub-problems leading to exponential time complexity.
+    • With @lru_cache, repeated calls with the same input are instantly retrieved, reducing time complexity to O(n).
+
