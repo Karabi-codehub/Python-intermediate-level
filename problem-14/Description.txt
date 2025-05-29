@@ -1,0 +1,13 @@
+🔍 Problem Explanation :
+Imagine a box (the cache) that can only hold a fixed number of items (let's say 3). When it's full and you try to add a new item, it throws out the Least Recently Used item — the one you haven't used for the longest time.
+You need to create a Python class that supports:
+    • get(key) – Return the value of the key if it exists in the cache. If not, return -1.
+    • put(key, value) – Insert or update the value. If inserting a new item and the cache is full, remove the least recently used item.
+🔧 Solution Strategy:
+We'll use OrderedDict from the collections module. This is like a normal dictionary but remembers the insertion order — which helps us track which item was used most recently or least recently.
+🔁 Summary:
+    • Least Recently Used (LRU) means if the cache is full, remove the item that hasn't been accessed in the longest time.
+    • OrderedDict helps keep track of the order in which items are used.
+    • .move_to_end(key) is used to update access order.
+    • .popitem(last=False) removes the oldest entry (i.e., least recently used).
+
