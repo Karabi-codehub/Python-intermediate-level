@@ -1,16 +1,16 @@
 # BongoDev Python Tasks
 # Python-intermediate-level
-This repository contains solutions to 18 intermediate-level Python problems provided by BongoDev as part of their programming training curriculum.
+This repository contains solutions to 18 intermediate-level Python problems provided by **bongoDev** as part of their programming training curriculum.
 
-📘 Topics Covered
+**📘 Topics Covered**
 
-🧠 String & Text Processing
+**🧠 String & Text Processing**
 
 -Extract the longest word from a sentence
 
 -Find the most frequent word (excluding stopwords)
 
-📊 Algorithms & Data Structures
+**📊 Algorithms & Data Structures**
 
 -Group anagrams using sorted keys and dictionaries
 
@@ -18,25 +18,25 @@ This repository contains solutions to 18 intermediate-level Python problems prov
 
 -Simulate an LRU cache with OrderedDict or a custom implementation
 
-📂 File I/O & Log Analysis
+**📂 File I/O & Log Analysis**
 
 -Analyze Apache logs and count top IP addresses
 
-🔐 Validation & Security
+**🔐 Validation & Security**
 
 -Validate email formats using regex
 
 -Check password strength for security compliance
 
-🧾 Nested Data Handling
+**🧾 Nested Data Handling**
 
 -Flatten a deeply nested JSON object into key-value pairs
 
-💻 CLI Tools
+**💻 CLI Tools**
 
 -Build a command-line calculator that parses natural language-like input
 
-✅ Skills Practiced
+**✅ Skills Practiced**
 
 -Using built-in Python libraries like collections, re, and functools
 
@@ -48,7 +48,7 @@ This repository contains solutions to 18 intermediate-level Python problems prov
 
 -CLI and string parsing logic
 
-📂 Folder Structure
+**📂 Folder Structure**
 
 Each problem includes:
 
@@ -58,7 +58,7 @@ Each problem includes:
 
 -explanation.md – Step-by-step explanation of the solution
 
-🚀 Why This Set?
+**🚀 Why This Set?**
 
 -These intermediate-level problems simulate real-world backend, data processing, and utility scripting scenarios. They're perfect for:
 
